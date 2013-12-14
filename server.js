@@ -4,8 +4,6 @@ var facts = require('./facts').module;
 var app = express();
 var port = process.env.PORT || 3000;
 
-console.log(facts);
-
 app.get('*', function(request, response){
   response.send(facts[Math.floor(Math.random()*facts.length)]);
 });
